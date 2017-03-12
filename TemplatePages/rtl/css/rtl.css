@@ -1,0 +1,99 @@
+body{direction: rtl;}
+.gt_hdr_3_ui_element ul li i{margin-right: 0px;margin-left: 10px;}
+.gt_hdr3_search input[type="submit"], .gt_hdr3_search button{right: auto;left: 0px;}
+div[class*="col-md"],div[class*="col-sm"],div[class*="col-xs"],.gt_main_services,.gt_wht_offer_wrap > i,
+.gt_course_tab_list ul li,.gt_latest_course_author figure,figure,ul,.gt_foo_news ul, .gt_foo_news ul > li,
+.gt_newsltr_wrap form input[type="text"],.gt-logo,.gt_hdr3_navigation ul li,.progress-bar,
+.gt_comming_soon_field input[type="text"],.gt_class_spec ul li span,.gt_comment_wrap figure,
+.gt_aside_post_wrap ul li figure,.gt_pop_cour > span,.event_date,.gt_news_date,.event_detail_wrap,
+.event_list_detail ul li i,.event_detail_wrap ul.countdown li,.menu,.menu ul li,.gt-author-info-list li i,
+.profile-pic,.gt-browse-holder,.gt_product_name,.gt_product_name_des,.gt_product_left_wrap #incdec,
+.gt_product_left_wrap span,.gt-user-content ul.gt-shortlisted li .gt-media
+{float: right;}
+.gt_hdr3_navigation,.skill .progress-bar > span,.gt_comment_des > a,.gt_aside_category ul li span,.gt_event_des,
+.event_list_detail,.top_navi_caption ul li,.top_navi_caption,.gt-plus,.top_search_wrap
+{float: left;}
+.gt_wht_offer_des{padding: 0px 85px 0px 0px;}
+.gt_fact_link_wrap a:first-of-type{margin-left: 20px;}
+.course_price{right: auto;left: 15px;}
+.gt_course_search_bar form label{right: auto;left: 0px;}
+.gt_course_search_bar form label:before{left: auto;right: -7px;}
+.gt_course_search_bar form input[type="search"]{padding: 8px 15px 8px 95px;}
+.course_author_des{padding: 0px 70px 0px 0px}
+.gt_team_scl_icon ul > li{margin: 0px 8px 0px 0px}
+.gt_testi2_name{padding-right: 10px;}
+ul.gt_blog_meta li i{margin-right: 0px;margin-left: 8px;}
+.foo_news_content{padding: 0px 90px 0px 0px;}
+.foo_news_content ul > li > i{margin: 0px 0px 0px 5px;}
+ul.gt_team1_contact_info li i{margin: 0px 0px 0px 15px;}
+.gt_newsltr_wrap form input[type="text"]{margin-right: 0px;margin-left: 20px;}
+.gt_hdr3_navigation ul ul{left: auto;right: 0px;}
+.gt_sub_banner_hdg ul li:before{right: -2px;left: auto;}
+.gt_team2_des_wrap ul li i{margin-right: 0px;margin-left: 10px;}
+.skill .progress .lead{left: auto;right: auto;}
+.gt_commming_soon ul.countdown li{margin: 0px 50px 20px 0px;}
+.gt_commming_soon ul.countdown li:first-child{margin-right: 0px;}
+.gt_comming_soon_field input[type="text"]{margin-left: 15px;margin-right: 0px;}
+.cls_spec_des{padding: 0px 65px 0px 0px;}
+.gt_comment_des{padding: 0px 110px 0px 0px;}
+.gt_comment_date span,.gt_comment_date span:first-of-type{margin-right: 0px;margin-left: 15px;}
+.gt_comment_date span i{margin-left: 8px;margin-right: 0px;}
+.gt_aside_search_wrap form input[type="submit"], .gt_aside_search_wrap form button{left: 0px;right: auto;}
+.gt_aside_search_wrap form input[type="text"]{padding: 8px 15px 8px 50px;}
+.gt_detail_hdg > h6:before{left: auto;right: 0px;}
+.gt_aside_category ul li:first-child span{padding-top: 3px;}
+.gt_aside_category ul li span{padding-top: 12px;}
+.gt_aside_post_des{padding: 0px 90px 0px 0px;}
+.gt_pop_cour > span{border-left: 0px;border-right: 2px solid;padding-left: 0px;padding-right: 20px;}
+.gt_pop_cour h5 > a{padding-right: 20px;}
+.gt_pop_cour li i{margin-right: 0px;margin-left: 5px;}
+.gt_course_listing_style > span{margin-left: 0px;padding-left: 0px;padding-right: 10px;margin-right: 10px;}
+.gt_course_listing_style > span{border-right: 2px solid;}
+.event_date{margin-left: 85px;margin-right: 0px;}
+.event_date:before{right: auto;left: 0px;}
+.event_list_detail{margin: 0px 15px 0px 0px;}
+.event_list_detail .cls_spec_des{padding: 0px 40px 0px 0px;}
+.gt-user-login > a:after{right: auto;left: -16px;}
+.gt_latst_new_des{padding: 20px 120px 0px 0px;}
+.gt_latst_new_des ul li i{margin-left: 5px;margin-right: 0px;}
+.gt_hdr_3_ui_element ul li ul li:after{right: auto;left: 10px;}
+.gt_hdr_3_ui_element ul li ul li a{text-align: right;}
+.gt-usser-account-list ul li a i,.gt-logout i{margin: -3px 0px 0 17px;}
+.gt-logout,.gt-usser-account-list ul{float: left;width: 100%;}
+.gt-usser-account-list ul li a:after,.gt-logout:after{right: auto;left: 40px;}
+.chosen-container .chosen-results{width: 100%;}
+.gt-user-content .gt-field a i{right: auto;left: 20px;}
+.gt-logout:after,.gt-usser-account-list ul li a:after{opacity: 0;visibility: hidden;}
+.gt-logout:hover:after{right: auto;opacity: 1;visibility: visible;}
+.gt-author-info-list li i{margin: 3px 0px 0 10px;}
+.gt-browse-holder{margin-right: 20px;}
+.gt-user-statements,.gt-user-statements ul,.gt-user-statements>li,.gt-user-statements .gt-statements-label
+,.gt-user-statements .gt-statements-label ul,.gt-user-statements .gt-statements-content
+{float: left;width: 100%;}
+.gt-user-statements .gt-statements-content li:nth-child(1){padding: 0 3px 0 0px;}
+.gt-user-statements .gt-statements-content li:nth-child(1) span:after{left: auto;right: -29px;}
+.gt_blog_des_wrap ul.gt_blog_meta:before{left: auto;right: -15px;}
+.gt_blog_figcaption ul li{margin: 0px 6px 0px 0px;}
+.gt_shop_tab_des ul li:before{left: auto;right: 18%;}
+.gt_product_left_wrap #incdec{margin-left: 0px;margin-right: 70px;}
+.gt-user-courses ul,.gt-user-courses>ul>li,.gt-user-courses .gt-courses-content,
+.gt-user-courses .gt-courses-label{width: 100%;float: left;}
+.gt-user-courses .gt-courses-label li:last-child i{padding: 0 0px 0 5px;}
+.gt-user-content ul.gt-shortlisted li .gt-media{margin-right: 0px;margin-left: 30px;}
+.gt-user-content ul.gt-shortlisted li .gt-remove-btn{right: auto;left: 0px;}
+
+.gt_right, .gt_right > h6,
+.gt_kid_navigation > a.gt_right_sidebar_btn_open,
+.gt_menu{float: left;}
+.gt_archive1_img,.gt_archive1_des,.gt_archive1_element,
+.gt_archive1_des > a,.gt_copyright_scl_icon > ul > li{float: right;}
+.gt_kid_logo{float: right;margin-right: 10px;margin-left: 0px;}
+.gt_kid_navigation > a.gt_right_sidebar_btn_open{margin-right: 0px;margin-left: 10px;}
+.gt_menu{margin-left: 10px;}
+.gt_kid_service_des{margin-right: 100px;margin-left: 0px;}
+.gt_kid_service{left: auto;right: 0px;}
+.gt_archive1_des > h4 > a::before,
+.gt_kid_hdg_wrap > h4::before,
+.gt_kid_title_wrap .separator.line-separator::after,
+.gt_kid_title_wrap .separator.line-separator,
+.gt_kid_hdg > h4::before{left: auto;right: 0px;}

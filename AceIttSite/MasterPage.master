@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title>Ace in tests</title>
+    <link href="~/Content/Css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Learning activity for Children.">
+    <meta name="keywords" content="child,children,school,childcare,colorful">
+    <meta name="author" content="">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../../favicon.ico">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/Css/carousel.css" rel="stylesheet">
+    
+    <!-- Swiper Slider CSS -->
+    <link href="css/swiper.css" rel="stylesheet">
+	<!-- Custom Main StyleSheet CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Color CSS -->
+    <link href="css/color.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    
+    <!--Header Wrap Start-->
+    <header>
+        <div class="gt_top3_wrap default_width">
+            <div class="container">
+                <div class="gt_top3_scl_icon">
+                    <ul class="gt_hdr3_scl_icon">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="gt_hdr_3_ui_element">
+                    <ul>
+                        <li><i class="fa fa-phone"></i>+124 456 7858</li>
+                        <li><i class="fa fa-envelope-o"></i><a href="#">info@aceitt.com</a></li>
+                    </ul>
+                </div>
+                <div class="gt_hdr3_search">
+                    <form>
+                        <input type="search" placeholder="Enter your search...">
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="gt_top3_menu default_width">
+            <div class="container">
+                <div class="gt-logo">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                </div>
+                <nav class="gt_hdr3_navigation">
+                    <!-- Responsive Buttun -->
+  
+                    <!-- Responsive Buttun -->
+                    <ul class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <li class="active"><a href="default.aspx">Home</a>
+                            <ul>
+                                <li class="active"><a href="default.aspx">Home Default</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="courses.aspx">Courses</a>
+                            <ul>
+                                <li><a href="MentalMath.aspx">Mental Math</a></li>
+                                <li><a href="MentalMath.aspx">Gifted - 1st Grade</a></li>
+                                <li><a href="MentalMath.aspx">Gifted - 2nd Grade</a></li>
+                                <li><a href="MentalMath.aspx">Gifted - 3rd Grade</a></li>
+                                <li><a href="MentalMath.aspx">Course Detail</a></li>
+                            </ul>
+                        </li>                       
+                        <li><a href="javascript:avoid(0);">Pages</a>
+                            <ul>
+                                <li><a href="user-detail.html">Instructor Dashboard</a></li>
+                                <li><a href="user-detail.html">User Dashboard</a></li>
+                                <li><a href="price-table.html">Price Table</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact Us</a></li>
+                          <li><a href="javascript:avoid(0);">Franchise</a></li>
+                                <li><a href="javascript:avoid(0);">Login</a></li>
+                                <li><a href="javascript:avoid(0);"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--Header Wrap End-->
+  
+</head>
+<body>
+
+<!--gt Wrapper Start-->  
+<%--<div class="gt_wrapper">--%>
+
+    <!--POP Up Form Wrap Start-->
+    <div class="modal fade" id="apply_form" tabindex="-1" role="dialog" aria-labelledby="sign-in">
+        <div class="modal-dialog" role="document">
+            <div class="gt_pf_outer_wrap default_width">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="col-md-6">
+                    <div class="gt_pf_form default_width">
+                        <h3>Register a Courses</h3>
+                        <form class="default_width">
+                            <input class="c_ph" type="text" placeholder="Name">
+                            <input class="c_ph" type="email" placeholder="Email">
+                            <input class="c_ph" type="text" placeholder="Phone Number">
+                            <select>
+                                <option>Course</option>
+                                <option>Course</option>
+                                <option>Course</option>
+                            </select>
+                            <div class="gt_view_more default_width">
+                                <a href="#">Register Now</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gt_pf_form_img default_width">
+                        <a href="#"><img src="images/logo-white.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--POP Up Form Wrap End-->
+
+<%--</div>--%>
+
+    <div class="container">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                         
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <div class="container">
+         <asp:ContentPlaceHolder ID="LeftColumnContent" runat="server">
+                   
+        </asp:ContentPlaceHolder>
+
+    </div>
+
+    <script src="Scripts\jquery-3.1.1.min.js"></script>
+
+    <script>
+        window.jQuery = window.$ = require('jquery');
+    </script>
+
+    
+    <script src="Scripts\bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+    <!--Jquery Library-->
+    <script src="js/jquery.js"></script>
+    <!--Bootstrap core JavaScript-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Swiper JavaScript-->
+    <script src="js/swiper.jquery.min.js"></script>
+    <!--Accordian JavaScript-->
+    <script src="js/jquery.accordion.js"></script>
+    <!--Count Down JavaScript-->
+    <script src="js/jquery.downCount.js"></script>
+    <!--Pretty Photo JavaScript-->
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <!--Owl Carousel JavaScript-->
+	<script src="js/owl.carousel.js"></script>
+    <!--Number Count (Waypoint) JavaScript-->
+	<script src="js/waypoints-min.js"></script>
+    <!--Filter able JavaScript-->
+	<script src="js/jquery-filterable.js"></script>
+    <!--WOW JavaScript-->
+    <script src="js/wow.min.js"></script>
+    <!--Custom JavaScript-->
+	<script src="js/custom.js"></script>
+   
+    </body>
+</html>
