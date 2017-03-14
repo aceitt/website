@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TestPage.master.cs" Inherits="TestPage" %>
 
 <!DOCTYPE html>
 
@@ -10,28 +10,27 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 	
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Learning activity for Children.">
-    <meta name="keywords" content="child,children,school,childcare,colorful">
-    <meta name="author" content="">
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Learning activity for Children."/>
+    <meta name="keywords" content="child,children,school,childcare,colorful"/>
+    <meta name="author" content=""/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="../../favicon.ico"/>
     
     <!-- Bootstrap core CSS -->
-    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
-    <link href="~/Content/Css/carousel.css" rel="stylesheet">
+    <link href="~/Content/Css/carousel.css" rel="stylesheet"/>
     
     <!-- Swiper Slider CSS -->
-    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet"/>
 	<!-- Custom Main StyleSheet CSS -->
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
     <!-- Color CSS -->
-    <link href="css/color.css" rel="stylesheet">
+    <link href="css/color.css" rel="stylesheet"/>
     <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
-
+    <link href="css/responsive.css" rel="stylesheet"/>
     
     <!--Header Wrap Start-->
     <header>
@@ -53,7 +52,7 @@
                 </div>
                 <div class="gt_hdr3_search">
                     <form>
-                        <input type="search" placeholder="Enter your search...">
+                        <input type="search" placeholder="Enter your search..." />
                         <button><i class="fa fa-search"></i></button>
                     </form>
                 </div>
@@ -104,6 +103,14 @@
   
 </head>
 <body>
+    <form runat="server">
+           <div id="body">
+                <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                <section class="content-wrapper main-content clear-fix">
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                </section>
+            </div>
+      </form>
 
 <!--gt Wrapper Start-->  
 <%--<div class="gt_wrapper">--%>
@@ -143,11 +150,6 @@
 
 <%--</div>--%>
 
-    <div class="container">
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                         
-        </asp:ContentPlaceHolder>
-    </div>
 
     <div class="container">
          <asp:ContentPlaceHolder ID="LeftColumnContent" runat="server">
@@ -191,8 +193,6 @@
     <script src="js/wow.min.js"></script>
     <!--Custom JavaScript-->
 	<script src="js/custom.js"></script>
-
-    
    
     </body>
 </html>

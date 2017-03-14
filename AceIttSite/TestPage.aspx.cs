@@ -25,10 +25,10 @@ public partial class TestPage : System.Web.UI.Page
     StringBuilder sb;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Request.IsAuthenticated)
-        {
-            FormsAuthentication.RedirectToLoginPage();
-        }
+        //if (!Request.IsAuthenticated)
+        //{
+        //    FormsAuthentication.RedirectToLoginPage();
+        //}
 
         if (int.Parse(Request.Params["SNO"].ToString()) > int.Parse(Request.Params["Count"].ToString()))
         {
@@ -60,7 +60,7 @@ public partial class TestPage : System.Web.UI.Page
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = "GetQuestion";
+            cmd.CommandText = "sp_GetQuestion";
 
             SqlParameter pSNo = new SqlParameter("@SNo", Int32.Parse(Sno));
             SqlParameter pTblId = new SqlParameter("@tableId", tblId);
@@ -75,13 +75,13 @@ public partial class TestPage : System.Web.UI.Page
             {
                 if (r.Read())
                 {
-                    sb.Append(string.Format("<p><b>{0}</b><br />  <h5>{1}</h5></p>", Sno, r.GetString(0)));
-                    int i = 65;
-                    foreach (var a in r.GetString(1).Split(','))
-                    {
-                        sb.Append(string.Format(rbList, Sno, Convert.ToChar(i++), a, Sno));
-                        sb.Append("<p> </p>");
-                    }
+                    sb.Append(string.Format("<p><b>{0}</b> <h5>{1}</h5></p>", Sno, r.GetString(0)));
+                    //int i = 65;
+                    //foreach (var a in r.GetString(1).Split(','))
+                    //{
+                    //    sb.Append(string.Format(rbList, Sno, Convert.ToChar(i++), a, Sno));
+                    //    sb.Append("<p> </p>");
+                    //}
 
                     sb.Append(string.Format("<input type=\"hidden\" value=\"{0}\" name=\"SNO\" />", int.Parse(Request.Params["SNO"]) + 1));
                     sb.Append(string.Format("<input type=\"hidden\" value=\"{0}\" name=\"ExamId\" />", Request.Params["ExamId"]));

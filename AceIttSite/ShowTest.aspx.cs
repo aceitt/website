@@ -21,34 +21,34 @@ public partial class ViewExam : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Request.IsAuthenticated)
-        {
-            FormsAuthentication.RedirectToLoginPage();
-            return;
-        }
+        //if (!Request.IsAuthenticated)
+        //{
+        //    FormsAuthentication.RedirectToLoginPage();
+        //    return;
+        //}
 
         try
         {
             sb = new StringBuilder();
 
-            if (string.IsNullOrEmpty(Response.Cookies["LoggedInUser"].Value))
-            {
-                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["StarterSite"].ConnectionString))
-                {
-                    conn.Open();
-                    SqlCommand cmd = conn.CreateCommand();
+            //if (string.IsNullOrEmpty(Response.Cookies["LoggedInUser"].Value))
+            //{
+            //    using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["StarterSite"].ConnectionString))
+            //    {
+            //        conn.Open();
+            //        SqlCommand cmd = conn.CreateCommand();
 
-                    cmd.CommandText = string.Format("select UserId from UserProfile where UserName = '{0}'", Session["UserId"]);
+            //        cmd.CommandText = string.Format("select UserId from UserProfile where UserName = '{0}'", Session["UserId"]);
 
-                    using (var r = cmd.ExecuteReader())
-                    {
-                        if(r.Read())
-                        {
-                            Response.Cookies["LoggedInUser"].Value = r.GetInt32(0).ToString();
-                        }
-                    }
-                }
-            }
+            //        using (var r = cmd.ExecuteReader())
+            //        {
+            //            if(r.Read())
+            //            {
+            //                Response.Cookies["LoggedInUser"].Value = r.GetInt32(0).ToString();
+            //            }
+            //        }
+            //    }
+            //}
 
             if (!IsPostBack)
             {
@@ -77,51 +77,39 @@ public partial class ViewExam : System.Web.UI.Page
 
             
 
-            SqlParameter examId = new SqlParameter("@examid", Int64.Parse(Request.Params["Id"]));
-            SqlParameter cateogryId = new SqlParameter("@categoryId", Int64.Parse(Request.Params["cateogryId"]));
-            SqlParameter questionCount = new SqlParameter("@questionCount", 20);//  Int64.Parse(Request.Params["questionCount"]));
-            SqlParameter memberId = new SqlParameter("@memberId", Response.Cookies["LoggedInUser"].Value);
-            SqlParameter tblNameIn = new SqlParameter("@tblNameIn", Guid.NewGuid().ToString().Replace('-', '_'));
-            SqlParameter tblNameout = new SqlParameter("@tblNameout", System.Data.SqlDbType.VarChar, 256);
+            SqlParameter studenId = new SqlParameter("@id", Int32.Parse(Request.Params["Id"]));
+            SqlParameter cateogryId = new SqlParameter("@content_id", Int32.Parse(Request.Params["cateogryId"]));
+            SqlParameter questionCount = new SqlParameter("@qCount", 20);//  Int64.Parse(Request.Params["questionCount"]));
+            SqlParameter tblNameout = new SqlParameter("@testid", System.Data.SqlDbType.VarChar, 256);
             SqlParameter status = new SqlParameter("@status", System.Data.SqlDbType.Bit);
-            SqlParameter count = new SqlParameter("@count", System.Data.SqlDbType.Int);
-            SqlParameter startTime = new SqlParameter("@startTime", System.Data.SqlDbType.DateTime2);
+            
             SqlParameter durationInMins = new SqlParameter("@durationInMins", 20);
 
 
             tblNameout.Direction = System.Data.ParameterDirection.Output;
             status.Direction = System.Data.ParameterDirection.Output;
-            count.Direction = System.Data.ParameterDirection.Output;
-            examId.Direction = System.Data.ParameterDirection.Input;
+            studenId.Direction = System.Data.ParameterDirection.Input;
             questionCount.Direction = System.Data.ParameterDirection.Input;
-            memberId.Direction = System.Data.ParameterDirection.Input;
-            tblNameIn.Direction = System.Data.ParameterDirection.Input;
-            startTime.Direction = System.Data.ParameterDirection.Input;
+           
             durationInMins.Direction = System.Data.ParameterDirection.Input;
-
-            cmd.Parameters.Add(examId);
+            cmd.Parameters.Add(studenId);
             cmd.Parameters.Add(cateogryId);
             cmd.Parameters.Add(questionCount);
-            cmd.Parameters.Add(memberId);
-            cmd.Parameters.Add(tblNameIn);
             cmd.Parameters.Add(tblNameout);
             cmd.Parameters.Add(status);
-            cmd.Parameters.Add(count);
-            cmd.Parameters.Add(startTime);
             cmd.Parameters.Add(durationInMins);
-            cmd.CommandText = "CreateExam";
+            cmd.CommandText = "sp_CreateTest";
 
-            startTime.Value = DateTime.UtcNow;
-
+           
             using (var r = cmd.ExecuteReader())
             {
-                if (r.Read())
-                {
-                    Response.Cookies["LoggedInUser"].Value = "User" + r.GetInt32(0);
-                }
+                //if (r.Read())
+                //{
+                //    Response.Cookies["LoggedInUser"].Value = "User" + r.GetInt32(0);
+                //}
 
                 tableName =  "t" + tblNameout.Value.ToString();
-                qcount = int.Parse(count.Value.ToString());
+                qcount = 20;
             }
         }
     }
